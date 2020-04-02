@@ -13,7 +13,7 @@ class BitbucketStatusInProgress_CommonTests extends GroovyTestCase {
         def variables = BitbucketStatusTestData.commonVariables()
         Helper.setEnvVariables(variables, bitbucketStatusInProgress_)
         InjectVars.injectTo(bitbucketStatusInProgress_, 'bitbucketStatus', 'commitId', 'imageName')
-        InjectVars.injectClosureTo(bitbucketStatusInProgress_, 'sh', ShellTestData.shellClosure)
+        InjectVars.injectClosureTo(bitbucketStatusInProgress_, 'sh', ShellTestData.shellClosureSSH)
     }
 
     @Test

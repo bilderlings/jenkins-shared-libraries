@@ -25,7 +25,7 @@ class BitbucketStatus_NullBitbucketStatus_DefinedBuildStatus_Tests extends Groov
         def variables = BitbucketStatusTestData.commonVariables()
         Helper.setEnvVariables(variables, bitbucketStatus_)
         InjectVars.injectTo(bitbucketStatus_, 'imageName', 'commitId')
-        InjectVars.injectClosureTo(bitbucketStatus_, 'sh', ShellTestData.shellClosure)
+        InjectVars.injectClosureTo(bitbucketStatus_, 'sh', ShellTestData.shellClosureSSH)
     }
 
     @Test

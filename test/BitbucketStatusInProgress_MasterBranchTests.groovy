@@ -43,7 +43,7 @@ class BitbucketStatusInProgress_MasterBranchTests extends GroovyTestCase {
         def variables = BitbucketStatusTestData.commonVariables()
         Helper.setEnvVariables(variables, bitbucketStatusInProgress_)
         InjectVars.injectTo(bitbucketStatusInProgress_, 'commitId', 'imageName')
-        InjectVars.injectClosureTo(bitbucketStatusInProgress_, 'sh', ShellTestData.shellClosure)
+        InjectVars.injectClosureTo(bitbucketStatusInProgress_, 'sh', ShellTestData.shellClosureSSH)
         def httpRequestIsExecuted = false
         bitbucketStatusInProgress_.httpRequest = { Map map ->
             httpRequestIsExecuted = true

@@ -25,7 +25,7 @@ class BitbucketStatus_DefaultCallParameters_UndefinedBuildStatus_Tests extends G
         def variables = BitbucketStatusTestData.commonVariables()
         Helper.setEnvVariables(variables, bitbucketStatus_)
         InjectVars.injectTo(bitbucketStatus_, 'commitId', 'imageName')
-        InjectVars.injectClosureTo(bitbucketStatus_, 'sh', ShellTestData.shellClosure)
+        InjectVars.injectClosureTo(bitbucketStatus_, 'sh', ShellTestData.shellClosureSSH)
     }
 
     @Test

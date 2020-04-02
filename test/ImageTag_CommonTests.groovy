@@ -10,7 +10,7 @@ class ImageTag_CommonTests extends GroovyTestCase {
     @Before
     void setUp(){
         InjectVars.injectTo(imageTag_, 'commitId')
-        InjectVars.injectClosureTo(imageTag_, 'sh', ShellTestData.shellClosure)
+        InjectVars.injectClosureTo(imageTag_, 'sh', ShellTestData.shellClosureSSH)
     }
 
     @Test

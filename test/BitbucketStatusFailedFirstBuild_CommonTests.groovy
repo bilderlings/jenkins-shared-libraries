@@ -14,7 +14,7 @@ class BitbucketStatusFailedFirstBuild_CommonTests extends GroovyTestCase {
         def variables = BitbucketStatusTestData.commonVariablesForFirstBuild()
         Helper.setEnvVariables(variables, bitbucketStatusFailed_)
         InjectVars.injectTo(bitbucketStatusFailed_, 'bitbucketStatus', 'commitId', 'imageName')
-        InjectVars.injectClosureTo(bitbucketStatusFailed_, 'sh', ShellTestData.shellClosure)
+        InjectVars.injectClosureTo(bitbucketStatusFailed_, 'sh', ShellTestData.shellClosureSSH)
     }
 
     @Test

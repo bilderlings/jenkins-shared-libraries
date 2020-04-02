@@ -29,7 +29,7 @@ class BitbucketStatus_DefinedBuildStatus_ValidBitBucketStatus_Tests extends Groo
         def variables = BitbucketStatusTestData.commonVariables()
         Helper.setEnvVariables(variables, bitbucketStatus_)
         InjectVars.injectTo(bitbucketStatus_, 'imageName', 'commitId')
-        InjectVars.injectClosureTo(bitbucketStatus_, 'sh', ShellTestData.shellClosure)
+        InjectVars.injectClosureTo(bitbucketStatus_, 'sh', ShellTestData.shellClosureSSH)
     }
 
     @Test

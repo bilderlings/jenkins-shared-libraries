@@ -20,7 +20,7 @@ class DockerPush_CommonTests extends GroovyTestCase {
         def actualCommands = []
         dockerPush_.sh = { command ->
             if (command instanceof Map){
-                return ShellTestData.shellClosure(command)
+                return ShellTestData.shellClosureSSH(command)
             }
             actualCommands << command; return null
         }

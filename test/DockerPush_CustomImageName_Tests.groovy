@@ -34,7 +34,7 @@ class DockerPush_CustomImageName_Tests extends GroovyTestCase {
         def actualCommands = []
         dockerPush_.sh = { command ->
             if (command instanceof Map){
-                return ShellTestData.shellClosure(command)
+                return ShellTestData.shellClosureSSH(command)
             }
             actualCommands << command; return null
         }

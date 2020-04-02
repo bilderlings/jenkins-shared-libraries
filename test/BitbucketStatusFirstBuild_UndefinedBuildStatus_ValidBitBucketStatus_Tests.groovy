@@ -29,7 +29,7 @@ class BitbucketStatusFirstBuild_UndefinedBuildStatus_ValidBitBucketStatus_Tests 
         def variables = BitbucketStatusTestData.commonVariablesForFirstBuild()
         Helper.setEnvVariables(variables, bitbucketStatus_)
         InjectVars.injectTo(bitbucketStatus_, 'imageTag', 'commitId', 'imageName')
-        InjectVars.injectClosureTo(bitbucketStatus_, 'sh', ShellTestData.shellClosure)
+        InjectVars.injectClosureTo(bitbucketStatus_, 'sh', ShellTestData.shellClosureSSH)
     }
 
     @Test
