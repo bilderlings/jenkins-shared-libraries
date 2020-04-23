@@ -1,4 +1,4 @@
 
 def call(){
-    "${BUILD_TAG.take(53)}-x"
+    "${BUILD_TAG.take(53)}-x".replaceAll('--', '-')
 }
